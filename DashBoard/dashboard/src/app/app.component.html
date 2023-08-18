@@ -1,0 +1,105 @@
+
+<p>
+  <mat-toolbar class="header">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Energyviss/Live Dashboard</span>
+    <span class="example-spacer"></span>
+
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+
+  </mat-toolbar>
+</p>
+
+<div class="values">
+    <span class="variables"> FLOOR:</span>
+    <mat-form-field class="example-full-width" style="height: 70px;">
+      <mat-label>FLOOR</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+
+    <span class="variables">SECTION:</span>
+    <mat-form-field class="example-full-width" style="height: 70px;">
+      <mat-label>Section</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+
+    <span class="variables">VIEW:</span>
+    <mat-form-field class="example-full-width" style="height: 70px;">
+      <mat-label>View</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+
+    <span class="variables">METER:</span>
+    <mat-form-field class="example-full-width" style="height: 70px;">
+      <mat-label>Meter</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+
+</div>
+
+<div class="energy-values">
+    <div>
+     <span style="font-weight: bolder;">ENERGY  :</span>
+     <span style="color: red;">156,610 kWh</span>
+    </div>
+    <div>
+     <span style="font-weight: bolder;">LAST UPDATED  :</span>
+     <span style="color: red;">22/06/2021 12:07pm</span>
+    </div>
+    <div>
+      <span style="font-weight: bolder;">NEXT HOUR PREDICTED ENERGY  :</span>
+      <span style="color: red;">157,393.05 kWh</span>
+    </div>
+</div>
+<div class="progress-values">
+    <div class="progress-bar" >
+     <div class="skills">
+       <div class="skill">
+        <div class="skill-name">Voltage(V)</div>
+         <div class="skill-bar">
+         <div class="skill-percentage" per="240.32V" style="max-width:95%"></div>
+         </div>
+       </div>
+    <div class="skill">
+      <div class="skill-name">Current(A)</div>
+      <div class="skill-bar">
+        <div class="skill-percentage" per="11.0A" style="max-width:11%"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">Power(kW)</div>
+      <div class="skill-bar">
+        <div class="skill-percentage" per="0.17" style="max-width:0.17%"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">PowerFactor</div>
+      <div class="skill-bar">
+        <div class="skill-percentage" per="0.3" style="max-width:0.3%"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">Frequency(Hz)</div>
+      <div class="skill-bar">
+        <div class="skill-percentage" per="50.6%" style="max-width:85%"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="charts">
+
+  <div class="line" [chart]="lineChart1">
+
+  </div>
+
+  <div class="line" [chart]="lineChart2">
+
+  </div>
+</div>
