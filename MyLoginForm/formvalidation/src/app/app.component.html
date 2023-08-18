@@ -1,0 +1,30 @@
+
+<div class="form-wrapper">
+
+  
+  <form [formGroup] = "loginForm" (ngSubmit) = "loginUser()">
+    
+    <div class="input-wrapper" style="background-color: white;">
+     
+       <div class="all-inputs" >
+        <p class="title">NOKIA</p>
+        <p class="subtitle">FACILIVISS</p>
+           <input class="email-input" type="text" placeholder="Enter Email" name="user" formControlName="user"/>
+                                       
+           <span *ngIf="user && user.invalid && user.touched" style="color: red;">Please enter valid email</span>
+                                      
+           <input  class="pwd-input"   type="password" placeholder="Enter password" name="password" formControlName="password"/>
+                                        
+           <span *ngIf="password && password.invalid && password.touched" style="color: red;">Password should be minimum 6 characters</span>
+                               
+           <p class="forgot-pwd">Forgot Password?</p>
+                                       
+           <div class="btn-wrapper">
+              <button class="login-btn" [disabled] = "loginForm.invalid">Login</button>
+           </div>
+
+        </div>
+    </div>
+  </form>
+
+</div>
